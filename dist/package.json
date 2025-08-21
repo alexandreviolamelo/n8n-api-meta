@@ -1,11 +1,17 @@
 {
   "name": "n8n-nodes-meta-api",
-  "version": "1.0.2",
-  "description": "n8n nodes for Meta platforms (Instagram, Facebook, WhatsApp)",
+  "version": "1.1.2",
+  "description": "n8n nodes for Meta platforms (Instagram, Facebook, WhatsApp) - Versão expandida com funcionalidades avançadas",
   "keywords": [
     "n8n-community-node-package",
     "instagram",
-    "meta"
+    "meta",
+    "facebook",
+    "whatsapp",
+    "chatbot",
+    "automation",
+    "crm",
+    "advanced"
   ],
   "license": "MIT",
   "author": {
@@ -27,11 +33,15 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/MetaApi.credentials.js"
+      "dist/credentials/MetaApi.credentials.js",
+      "dist/credentials/Advanced/WhatsAppBusinessApi.credentials.js"
     ],
     "nodes": [
       "dist/nodes/Instagram/InstagramTrigger.node.js",
-      "dist/nodes/Meta/InstagramTrigger.node.js"
+      "dist/nodes/Meta/InstagramTrigger.node.js",
+      "dist/nodes/Meta/Advanced/InstagramAdvanced.node.js",
+      "dist/nodes/Facebook/Pages/FacebookPages.node.js",
+      "dist/nodes/WhatsApp/Business/WhatsAppBusiness.node.js"
     ]
   },
   "devDependencies": {
@@ -39,7 +49,11 @@
     "typescript": "^5.5.3"
   },
   "dependencies": {
+    "@sendgrid/mail": "^8.1.5",
     "axios": "^1.6.0",
-    "n8n-api-meta": "^1.0.1"
+    "mailchimp-api-v3": "^1.15.0",
+    "n8n-api-meta": "^1.0.1",
+    "openai": "^5.13.1",
+    "sentiment": "^5.0.2"
   }
 }
