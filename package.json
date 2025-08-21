@@ -1,7 +1,7 @@
 {
-  "name": "n8n-nodes-meta-api",
-  "version": "1.2.0",
-  "description": "n8n nodes for Meta platforms (Instagram, Facebook, WhatsApp) - Versão expandida com funcionalidades avançadas",
+  "name": "n8n-nodes-meta-integration-advanced",
+  "version": "1.2.1",
+  "description": "Advanced Meta Platforms integration for n8n - Instagram, Facebook, WhatsApp with enhanced features",
   "keywords": [
     "n8n-community-node-package",
     "instagram",
