@@ -1,5 +1,5 @@
 {
-  "name": "n8n-nodes-meta-apis",
+  "name": "n8n-api-meta",
   "version": "1.0.0",
   "description": "n8n nodes for Meta platforms (Instagram, Facebook, WhatsApp)",
   "keywords": ["n8n-community-node-package", "instagram", "meta"],
