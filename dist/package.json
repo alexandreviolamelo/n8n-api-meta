@@ -1,7 +1,7 @@
 {
-  "name": "n8n-nodes-meta-api",
-  "version": "1.1.2",
-  "description": "n8n nodes for Meta platforms (Instagram, Facebook, WhatsApp) - Versão expandida com funcionalidades avançadas",
+  "name": "n8n-nodes-meta-integration-advanced",
+  "version": "1.2.2",
+  "description": "Advanced Meta Platforms integration for n8n - Instagram, Facebook, WhatsApp with enhanced features",
   "keywords": [
     "n8n-community-node-package",
     "instagram",
@@ -24,7 +24,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "build": "mkdir -p dist && cp package.json dist/",
+    "build": "mkdir -p dist && cp -r nodes dist/ && cp -r credentials dist/ && cp package.json dist/",
     "prepublishOnly": "npm run build"
   },
   "files": [
@@ -34,19 +34,28 @@
     "n8nNodesApiVersion": 1,
     "credentials": [
       "dist/credentials/MetaApi.credentials.js",
-      "dist/credentials/Advanced/WhatsAppBusinessApi.credentials.js"
+      "dist/credentials/Advanced/WhatsAppBusinessApi.credentials.js",
+      "dist/credentials/InstagramApi.credentials.js",
+      "dist/credentials/MetaOAuth2Api.credentials.js",
+      "dist/credentials/MetaAccessToken.credentials.js"
     ],
     "nodes": [
       "dist/nodes/Instagram/InstagramTrigger.node.js",
       "dist/nodes/Meta/InstagramTrigger.node.js",
       "dist/nodes/Meta/Advanced/InstagramAdvanced.node.js",
       "dist/nodes/Facebook/Pages/FacebookPages.node.js",
-      "dist/nodes/WhatsApp/Business/WhatsAppBusiness.node.js"
+      "dist/nodes/WhatsApp/Business/WhatsAppBusiness.node.js",
+      "dist/nodes/Meta/Instagram.node.js",
+      "dist/nodes/Meta/Facebook.node.js",
+      "dist/nodes/Meta/FacebookTrigger.node.js",
+      "dist/nodes/Meta/WhatsApp.node.js",
+      "dist/nodes/Meta/WhatsAppTrigger.node.js"
     ]
   },
   "devDependencies": {
+    "@types/node": "^24.3.0",
     "gulp": "^4.0.2",
-    "typescript": "^5.5.3"
+    "typescript": "^5.9.2"
   },
   "dependencies": {
     "@sendgrid/mail": "^8.1.5",
